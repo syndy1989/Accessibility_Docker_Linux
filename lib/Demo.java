@@ -17,8 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import com.deque.axe.AXE;
 import com.nft.parsing_docker.Docker_Parsing;
 
@@ -59,9 +58,9 @@ public class Demo{
 			
 			
 		
-		System.setProperty("phantomjs.binary.path", "/home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");        
+		System.setProperty("webdriver.chrome.driver", " /usr/local/bin/chromedriver");        
 
-		WebDriver driver = new PhantomJSDriver();
+		WebDriver driver = new ChromeDriver();
 		
 		driver.get(prop.getProperty("URL"));
 		
