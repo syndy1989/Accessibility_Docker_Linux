@@ -97,17 +97,19 @@ RUN mkdir -p docker_accessibility
 
 COPY ./lib /home/ec2-user/docker_accessibility/lib
 
-COPY phantomjs-2.1.1-linux-x86_64.tar.bz2 /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip && sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 
-WORKDIR /home/ec2-user/docker_accessibility
+#COPY phantomjs-2.1.1-linux-x86_64.tar.bz2 /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
-RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+#WORKDIR /home/ec2-user/docker_accessibility
 
-WORKDIR /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64/bin
+#RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 
-RUN ls
+#WORKDIR /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64/bin
 
-RUN pwd
+#RUN ls
+
+#RUN pwd
 
 COPY datafile.properties /home/ec2-user/docker_accessibility/datafile.properties
 
