@@ -92,8 +92,9 @@ RUN set -ex && \
 
 
 # EOF
+RUN WORKDIR /home/ec2-user
 
-RUN mkdir /home/ec2-user/docker_accessibility
+RUN mkdir docker_accessibility
 
 COPY ./lib /home/ec2-user/docker_accessibility/lib
 
