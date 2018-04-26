@@ -97,7 +97,7 @@ RUN mkdir -p docker_accessibility
 
 COPY ./lib /home/ec2-user/docker_accessibility/lib
 
-COPY phantomjs.exe /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
+COPY phantomjs-2.1.1-linux-x86_64.tar.bz2 /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 
