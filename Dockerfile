@@ -99,6 +99,8 @@ COPY ./lib /home/ec2-user/docker_accessibility/lib
 
 COPY phantomjs-2.1.1-linux-x86_64.tar.bz2 /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
+WORKDIR /home/ec2-user/docker_accessibility
+
 RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 COPY datafile.properties /home/ec2-user/docker_accessibility/datafile.properties
