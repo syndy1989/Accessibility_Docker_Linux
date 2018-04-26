@@ -59,7 +59,7 @@ public class Demo{
 			
 			
 		
-		System.setProperty("phantomjs.binary.path", "/home/ec2-user/docker_accessibility/phantomjs.exe");        
+		System.setProperty("phantomjs.binary.path", "/home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");        
 
 		WebDriver driver = new PhantomJSDriver();
 		
