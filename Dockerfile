@@ -1,5 +1,5 @@
 # AlpineLinux with a glibc-2.27-r0 and Oracle Java 8
-FROM alpine:3.7
+FROM debian:jessie
 
 
 MAINTAINER Anastas Dancha <anapsix@random.io>
@@ -98,6 +98,8 @@ RUN mkdir -p docker_accessibility
 COPY ./lib /home/ec2-user/docker_accessibility/lib
 
 #RUN sudo wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip && sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
+
+RUN sudo apt-get install libfontconfig
 
 COPY phantomjs-2.1.1-linux-x86_64.tar.bz2 /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
