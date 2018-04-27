@@ -1,6 +1,6 @@
 # AlpineLinux with a glibc-2.27-r0 and Oracle Java 8
 FROM alpine:3.7
-FROM debian:jessie
+#FROM debian:jessie
 
 
 MAINTAINER Anastas Dancha <anapsix@random.io>
