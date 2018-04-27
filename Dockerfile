@@ -113,6 +113,8 @@ WORKDIR /home/ec2-user/docker_accessibility/phantomjs-2.1.1-linux-x86_64/bin
 
 RUN  chmod +x phantomjs
 
+RUN pwd
+
 RUN ls
 
 COPY datafile.properties /home/ec2-user/docker_accessibility/datafile.properties
