@@ -58,7 +58,7 @@ public class Demo{
 			
 			
 		
-		File file1 = new File("/home/ec2-user/Demo/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
+		File file1 = new File("/home/ec2-user/docker_accessibility/datafile.properties/phantomjs");
         	System.setProperty("phantomjs.binary.path", file1.getAbsolutePath());
 		//System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");     
 
