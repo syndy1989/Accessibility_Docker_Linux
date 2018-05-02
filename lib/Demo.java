@@ -90,6 +90,29 @@ public class Demo{
 		filelist.add(fileresult);
 		pagename.add("home");
 		
+		driver.get(prop.getProperty("URL1"));
+		
+		
+		//calling method axe
+		try {
+			jsonresults=run_axe(driver, scriptUrl);
+		System.out.println("jsonresults"+jsonresults);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//calling substring for unique file name
+		result1=Sub_String_url(driver.getCurrentUrl(), 1);
+		
+		
+		
+		//creating file with unique name
+	String fileresult=dynamic_filecreation(result1, jsonresults);
+		filelist.add(fileresult);
+		pagename.add("ndtv");
+		
 		Docker_Parsing value=new Docker_Parsing();
 		
 		
